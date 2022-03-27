@@ -21,7 +21,8 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
  The app will have a secure login system, where the user will first need to create an account. Their personal information; email, username, phonenumber, password and age. Once user infromation is created and stored, the user can then sign into the app using their username and password that they have set. In this app the user can input new/additional records, and view previous records as lists. The inputs that the user is able to put in are; training duration, date, max speed, location, total distance, and weather. There are separte screens for each operation, so the users are able to transfer into different screens accordingly. 
  
 ![](uml_diagram.png) 
-(UML diagram of user and ski athlete)
+(ER diagram of user and ski athlete)
+
 
 
 ## Success Criteria
