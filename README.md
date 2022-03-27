@@ -5,7 +5,7 @@
 
 ## Problem definition
 My client for this project is my classmate, Elia Kobayashi, and he is a skier. During the winter, he is extremely active in skiing and he skiis very frequently. 
-He aims to improve his skills and performance, however, it is difficult to determine improvements and practice times due to the lack of resources for his documentation of practices. From this inconvenience raised, my client would like an organised platform where his ski session details could be recorded easily. 
+He aims to improve his skills and performance, however, it is difficult to determine improvements and practice times due to the lack of resources for his documentation of practices. From this inconvenience raised, my client would like an organised platform where his ski session details could be recorded and viewd easily. 
 
 
 ## Proposed Solution
@@ -23,8 +23,6 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
 ![](er_diagram.png) 
 (ER diagram of user and ski athlete)
 
-
-
 ## Success Criteria
 1. Include calendar for chosing date
 2. Functioning sign up/sign in system with secure password storage (encrypted)
@@ -32,6 +30,7 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
 4. Ability for the user to be able to view all the saved records on a screen
 5. ski/winter themed login page
 6. Ability to sign out of account and return to login page
+
 
 # Criteria B: Design
 
