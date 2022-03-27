@@ -20,9 +20,6 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
 ### Details
  The app will have a secure login system, where the user will first need to create an account. Their personal information; email, username, phonenumber, password and age. Once user infromation is created and stored, the user can then sign into the app using their username and password that they have set. In this app the user can input new/additional records, and view previous records as lists. The inputs that the user is able to put in are; training duration, date, max speed, location, total distance, and weather. There are separte screens for each operation, so the users are able to transfer into different screens accordingly. 
  
-![](er_diagram.png) 
-(ER diagram of user and ski athlete)
-
 ## Success Criteria
 1. Include calendar for chosing date
 2. Functioning sign up/sign in system with secure password storage (encrypted)
@@ -35,8 +32,13 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
 # Criteria B: Design
 
 ## System Diagram
-![](system_diagram1.jpg)
-Figure 1. system diagram for the game
+!![](er_diagram.png) 
+Figure x: ER diagram of user and ski athlete
+
+![](uml_diagram.png) 
+Figure x: UML diagram of user and ski athlete
+
+
 
 The system will be based on Mac OS 10.15.6 with Dual-Core Intel Core i3. This game will be created on python 3.9, where input will be from keyboard and output generated as text on screen monitor. 
 
