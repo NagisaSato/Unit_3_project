@@ -1,28 +1,24 @@
-# Unit_3_project
-
 # Unit 3: Elia's records of ski 
 ![](ski.png)
 
 # Criteria A: Planning
-My client for this project is my classmate, Elia Kobayashi, and he is a skier. During the winter, he is extremely active in skiing and he skiis very frequently. 
-He aims to improve his skills and performance, however, it is difficult to determine improvements and practice times due to the lack of resources for his documentation of practices. 
-
 
 ## Problem definition
+My client for this project is my classmate, Elia Kobayashi, and he is a skier. During the winter, he is extremely active in skiing and he skiis very frequently. 
+He aims to improve his skills and performance, however, it is difficult to determine improvements and practice times due to the lack of resources for his documentation of practices. From this inconvenience raised, my client would like an organised platform where his ski session details could be recorded easily. 
 
 
+## Proposed Solution
+### Design statement
+To address the issue above, I would like to create an app that documents his ski progression and records. This app will be created using Python 3.0 and Kivy Library in corporation with GUI. The program will be coded on PyCharm. The app consists of a secure login and sign up system, where users could document nessasary information for documentation. This project will take 4 weeks and will be evaluated according to the criterias.  ** More details under 'Details' below. **
 
-### Proposed Solution
+### Justification 
+This game is created using python because it is the only language I am familiar with, and it is one of the most commonly used programming languages in the world. The game will be based on Mac OS, with an application called Pycharm. Pycharm was chosen to be used for this project because I am familiar with the application, and is one of the most used coding applications in the world. Pycharm is beginner-friendly in which the errors are clearly identified and highlighted. In addition, Pycharm processes are quick and efficient and therefore increases productivity and speed of my work. 
 
+Kivy Library will be utilized for the reason that is links with Python, and it could be presented in an organized manner, which will be extremely useful when we program detailed and long codes like in this project. The classes and inheritances can be easily displayed, and it also provides detailed customozation, making the final product personal and adjustabe for the user purpose. In addition, GUI is ulitilized for this project as I would like to make the app easy for the users to identify and use, thus making it more useful for the users. 
 
-## Design statement
-I will try to design and make a game for a client who is the owner of the local game shop. The game will be an escape game and is constructed using the software python 3.10. It will take 3 weeks to make and will be evaluated according to the criteria A and B.
-
-## Justification 
-This game is created using python because it is the only language I am familiar with, thus it is one of the most commonly used programming languages in the world. The game will be based on Mac OS, with an application called Pycharm. Pycharm was chosen to be used for this project because I am familiar with the application, and is one of the most used coding applications in the world. Pycharm is beginner-friendly in which the errors are clearly identified and highlighted. In addition, Pycharm processes are quick and efficient and therefore increases productivity and speed of my work. 
+### Details
  
-## Details
-This game is an entirely text-based adventure game, in which the goal of the player is to escape the ISAK KAC building without getting caught by anyone. The player is meant to make appropriate decisions throughout the game to complete the game. The game will provide an inventory system where players are able to pick up items and use them accordingly. The game will keep track of the players’ name and score (time taken for the player to complete the game), and this information will be transferred to a database and will be displayed. The results would be displayed in ranking form where the person who completed the game the fastest would be inscripted on top. Additionally, this game is designed to be completed in a specific period of time frame, which is 15 mins. 
 
 
 ## Success Criteria
