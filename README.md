@@ -15,19 +15,22 @@ To address the issue above, I would like to create an app that documents his ski
 ### Justification 
 This game is created using python because it is the only language I am familiar with, and it is one of the most commonly used programming languages in the world. The game will be based on Mac OS, with an application called Pycharm. Pycharm was chosen to be used for this project because I am familiar with the application, and is one of the most used coding applications in the world. Pycharm is beginner-friendly in which the errors are clearly identified and highlighted. In addition, Pycharm processes are quick and efficient and therefore increases productivity and speed of my work. 
 
-Kivy Library will be utilized for the reason that is links with Python, and it could be presented in an organized manner, which will be extremely useful when we program detailed and long codes like in this project. The classes and inheritances can be easily displayed, and it also provides detailed customozation, making the final product personal and adjustabe for the user purpose. In addition, GUI is ulitilized for this project as I would like to make the app easy for the users to identify and use, thus making it more useful for the users. 
+GUI is ulitilized for this project as I would like to make the app easy for the users to identify and use, thus making it more visual and useful for the users. Kivy Library will be utilized for the reason that is links with Python, and it could be presented in an organized manner, which will be extremely useful when we program detailed and long codes like in this project. The classes and inheritances can be easily displayed, and it also provides detailed customozation, making the final product personal and adjustabe for the user purpose. 
 
 ### Details
+ The app will have a secure login system, where the user will first need to create an account. Their personal information; email, username, phonenumber, password and age. Once user infromation is created and stored, the user can then sign into the app using their username and password that they have set. In this app the user can input new/additional records, and view previous records as lists. The inputs that the user is able to put in are; training duration, date, max speed, location, total distance, and weather. There are separte screens for each operation, so the users are able to transfer into different screens accordingly. 
  
+![](uml_diagram.png) 
+UML diagram of user and ski athlete
 
 
 ## Success Criteria
-1. The game has to be entirely text-based.
-2. The game must record the time played.
-3. The game must record the player name and score.
-4. Display rankings; name of player and score
-5. Inventory system to secure items obtained by player
-6. Add time limit of 15 mins
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
 
 # Criteria B: Design
 
