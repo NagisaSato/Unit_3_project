@@ -32,13 +32,14 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
 # Criteria B: Design
 
 ## System Diagram
-!![](er_diagram.png) 
+![](er_diagram.png) 
 Figure x: ER diagram of user and ski athlete
 
 ![](uml_diagram.png) 
-Figure x: UML diagram of user and ski athlete
+Figure x: 
 
-
+![](sample_table.png) 
+Figure x: sample table for both 'athlete' and 'athlete'
 
 The system will be based on Mac OS 10.15.6 with Dual-Core Intel Core i3. This game will be created on python 3.9, where input will be from keyboard and output generated as text on screen monitor. 
 
