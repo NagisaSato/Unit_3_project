@@ -1,4 +1,4 @@
-# Unit 3: Elia's records of ski 
+# Unit 3: Ski documentation application
 ![](ski.png)
 
 # Criteria A: Planning
