@@ -32,7 +32,7 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
 # Criteria B: Design
 
 ## Sketch of app
-![](app_sketch.png) 
+![](app_sketch.jpg) 
 Figure 1: Sketch of the relationship between the screens and their functions
 
 ## System Diagram
