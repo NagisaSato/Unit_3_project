@@ -31,6 +31,10 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
 
 # Criteria B: Design
 
+##Sketch of app
+![](app_sketch.png) 
+Figure 1: Sketch of the relationship between the screens and their functions
+
 ## System Diagram
 ![](er_diagram.png) 
 Figure x: ER diagram of user and ski athlete
