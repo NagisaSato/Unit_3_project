@@ -43,7 +43,7 @@ Figure 2: System diagram with input, process, and output
 Figure 3: ER diagram of user and ski athlete
 
 ![](uml_diagram.png) 
-Figure 4: UML diagram: this shows that there will be two datatables; user and athlete
+Figure 4: UML diagram: this shows that there will be two datatables; user and athlete. 
 For one user, there could be n number of athlete information inputs.
 
 ![](sample_table.png) 
