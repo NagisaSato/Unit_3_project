@@ -40,10 +40,11 @@ Figure 1: Sketch of the relationship between the screens and their functions
 Figure 2: System diagram with input, process, and output
 
 ![](er_diagram.png) 
-Figure x: ER diagram of user and ski athlete
+Figure 3: ER diagram of user and ski athlete
 
 ![](uml_diagram.png) 
-Figure x: 
+Figure 4: UML diagram: this shows that there will be two datatables; user and athlete
+For one user, there could be n number of athlete information inputs.
 
 ![](sample_table.png) 
 Figure x: sample table for both 'athlete' and 'athlete'
