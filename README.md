@@ -36,6 +36,9 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
 Figure 1: Sketch of the relationship between the screens and their functions
 
 ## System Diagram
+![](app_system_diagram.jpg) 
+Figure 2: System diagram with input, process, and output
+
 ![](er_diagram.png) 
 Figure x: ER diagram of user and ski athlete
 
