@@ -59,6 +59,11 @@ The system will be based on Mac OS 10.15.6 with Dual-Core Intel Core i3. This ga
 
 
 ## Record of Tasks
+| Number of total minutes | Minutes to hours   |
+|-------------------------|--------------------|
+| 680 minutes             | 11hours 20 minutes |
+
+
 | Task number | Planned action                                        | Planned outcome                                                         | Time estimate | Target completion date | Criteria |
 |-------------|-------------------------------------------------------|-------------------------------------------------------------------------|---------------|------------------------|----------|
 | 1           | Inquire the clients needs                             | rough plan of what the app would be                                     | 20            | March 2                | A        |
