@@ -66,11 +66,11 @@ The system will be based on Mac OS 10.15.6 with Dual-Core Intel Core i3. This ga
 ### MVP code
 
 ### Sources
-SQL create table and insert data - youtube. (n.d.). Retrieved April 19, 2022, from https://www.youtube.com/watch?v=LAP9-vu-KgU ----
+SQL create table and insert data - youtube. (n.d.). Retrieved April 19, 2022, from https://www.youtube.com/watch?v=LAP9-vu-KgU 
 
-Theming. Theming - KivyMD 1.0.0.dev0 documentation. (n.d.). Retrieved April 20, 2022, from https://kivymd.readthedocs.io/en/latest/themes/theming/index.html ----
+Theming. Theming - KivyMD 1.0.0.dev0 documentation. (n.d.). Retrieved April 20, 2022, from https://kivymd.readthedocs.io/en/latest/themes/theming/index.html 
 
-SQLALCHEMY 1.1 documentation. Engine Configuration - SQLAlchemy 1.1 Documentation. (n.d.). Retrieved April 20, 2022, from https://docs-sqlalchemy.readthedocs.io/ko/latest/core/engines.html ----
+SQLALCHEMY 1.1 documentation. Engine Configuration - SQLAlchemy 1.1 Documentation. (n.d.). Retrieved April 20, 2022, from https://docs-sqlalchemy.readthedocs.io/ko/latest/core/engines.html 
 
-SQLAlchemy 1.3 documentation. Basic Use - SQLAlchemy 1.3 Documentation. (n.d.). Retrieved April 20, 2022, from https://docs.sqlalchemy.org/en/13/orm/extensions/declarative/basic_use.html ----
+SQLAlchemy 1.3 documentation. Basic Use - SQLAlchemy 1.3 Documentation. (n.d.). Retrieved April 20, 2022, from https://docs.sqlalchemy.org/en/13/orm/extensions/declarative/basic_use.html 
 
