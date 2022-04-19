@@ -62,29 +62,27 @@ The system will be based on Mac OS 10.15.6 with Dual-Core Intel Core i3. This ga
 | Task number | Planned action                                        | Planned outcome                                                         | Time estimate | Target completion date | Criteria |
 |-------------|-------------------------------------------------------|-------------------------------------------------------------------------|---------------|------------------------|----------|
 | 1           | Inquire the clients needs                             | rough plan of what the app would be                                     | 20            | March 2                | A        |
-| 2           | Confirm proposed solution                             | there is a solid proposed solution for further process                  | 20            |                        | A        |
-| 3           | Document; design statement, justification, details    | have all the three sections on github                                   | 30            |                        | A        |
-| 4           | List and create success criteria, confirm with client | have confirmed criteria listed on github, after being checked by client | 20            |                        | A        |
-| 5           | sketch the design solution                            | upload sketch of the application                                        | 20            |                        | B        |
-| 6           | create system diagram                                 | create and upload the system diagram                                    | 20            |                        | B        |
-| 7           | create ER diagram                                     | create and upload the ER diagram                                        | 20            |                        | B        |
-| 8           | create UML diagram                                    | create and upload the UML diagram                                       | 20            |                        | B        |
-| 9           | create sample table                                   | create and upload the sample tables                                     | 15            |                        | B        |
-| 10          | create the kivy file with screens and details         | create the kivy file and screens within                                 | 60            |                        | C        |
-| 11          | prepare base of app                                   | create screen manager, basic settings of the app                        | 30            |                        | C        |
-| 12          | code login screen                                     | lode the login screen and all the functions inside                      | 40            |                        | C        |
-| 13          | code welcome screen                                   | lode the login screen and all the functions inside                      |               |                        | C        |
-| 14          | code register screen                                  | lode the register screen and all the functions inside                   |               |                        | C        |
-| 15          | code data input screen                                | lode the input screen and all the functions inside                      |               |                        | C        |
-| 16          | code data viewing screen                              | lode the viewing screen and all the functions inside                    |               |                        | C        |
-| 17          | code edit data screen                                 | lode the editing screen and all the functions inside                    |               |                        | C        |
-| 18          | check the program                                     |                                                                         |               |                        | C        |
-| 19          | create flow diagrams                                  |                                                                         |               |                        | B        |
-| 20          | testing                                               |                                                                         |               |                        | D        |
-| 21          | video demonstration                                   |                                                                         |               |                        | D        |
-| 22          | upload all neccessary information on github           |                                                                         |               |                        | -        |                               
-
-
+| 2           | Confirm proposed solution                             | there is a solid proposed solution for further process                  | 20            | March 4                | A        |
+| 3           | Document; design statement, justification, details    | have all the three sections on github                                   | 30            | March 4                | A        |
+| 4           | List and create success criteria, confirm with client | have confirmed criteria listed on github, after being checked by client | 20            | March 6                | A        |
+| 5           | sketch the design solution                            | upload sketch of the application                                        | 20            | March 11               | B        |
+| 6           | create system diagram                                 | create and upload the system diagram                                    | 20            | March 13               | B        |
+| 7           | create ER diagram                                     | create and upload the ER diagram                                        | 20            | March 14               | B        |
+| 8           | create UML diagram                                    | create and upload the UML diagram                                       | 20            | March 14               | B        |
+| 9           | create sample table                                   | create and upload the sample tables                                     | 15            | March 18               | B        |
+| 10          | create the kivy file with screens and details         | create the kivy file and screens within                                 | 60            | March 20 - April 14    | C        |
+| 11          | prepare base of app                                   | create screen manager, basic settings of the app                        | 30            | March 21               | C        |
+| 12          | code login screen                                     | code the login screen and all the functions inside                      | 40            | March 22-26            | C        |
+| 13          | code welcome screen                                   | code the login screen and all the functions inside                      | 40            | March 26-28            | C        |
+| 14          | code register screen                                  | code the register screen and all the functions inside                   | 40            | March 24-April 14      | C        |
+| 15          | code data input screen                                | code the input screen and all the functions inside                      | 30            | March 28 - April 16    | C        |
+| 16          | code data viewing screen                              | code the viewing screen and all the functions inside                    | 30            | April 17               | C        |
+| 17          | code edit data screen                                 | code the editing screen and all the functions inside                    | 60            | April 17- 21           | C        |
+| 18          | check the program                                     | confirm there are no error, check for good coding practices             | 30            | April 21               | C        |
+| 19          | create flow diagrams                                  | create and upload flowcharts                                            | 30            | April 21               | B        |
+| 20          | functionality testing                                 | follow test plan and carry out the tests                                | 60            | April 22               | D        |
+| 21          | video demonstration                                   | create a video demonstration and upload                                 | 30            | April 22               | D        |
+| 22          | upload all neccessary information on github           | have all sections ready for submission                                  | 15            | April 23               | -        |
 
 ### MVP code
 
