@@ -65,7 +65,7 @@ The system will be based on Mac OS 10.15.6 with Dual-Core Intel Core i3. This ga
 
 ### MVP code
 
-### Sources
+### Citations
 SQL create table and insert data - youtube. (n.d.). Retrieved April 19, 2022, from https://www.youtube.com/watch?v=LAP9-vu-KgU 
 
 Theming. Theming - KivyMD 1.0.0.dev0 documentation. (n.d.). Retrieved April 20, 2022, from https://kivymd.readthedocs.io/en/latest/themes/theming/index.html 
