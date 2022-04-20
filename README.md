@@ -89,7 +89,277 @@ The system will be based on Mac OS 10.15.6 with Dual-Core Intel Core i3. This ga
 | 21          | video demonstration                                   | create a video demonstration and upload                                 | 30            | April 22               | D        |
 | 22          | upload all neccessary information on github           | have all sections ready for submission                                  | 15            | April 23               | -        |
 
-### MVP code
+# Criteria C: Development
+Below is the code for the neccesary screens to operate the app
+```py
+ScreenManager:
+    id: scr_manager
+
+    LoginScreen:
+        name: "LoginScreen"
+        id: "LoginScreen"
+
+    RegistrationScreen:
+        name: "RegisterScreen"
+        id: "RegisterScreen"
+
+    WelcomeScreen:
+        name: "WelcomeScreen"
+        id: "WelcomeScreen"
+
+    InputScreen:
+        name: "InputScreen"
+        id: "InputScreen"
+
+    DataScreen:
+        name: "DataScreen"
+        id: "DataScreen"
+
+    EditScreen:
+        name: "EditScreen"
+        id: "EditScreen"
+```
+The ScreenManager stores and manages the screens inside, in which here are the six screens
+
+## creating the databases 
+```py
+    def create(self):
+        self.cursor.execute("""CREATE TABLE Users (
+            name VARCHAR(200) not null,
+            username VARCHAR(200) not null unique,
+            age INTEGER not null,
+            phone_number INTEGER unique, 
+            email VARCHAR(255) not null unique,
+            password VARCHAR (256) not null
+        );
+        """)
+
+        self.cursor.execute("""CREATE TABLE Athlete (
+                     id INTEGER primary key,
+                     date VARCHAR(200) not null,
+                     location VARCHAR(200) not null,
+                     weather VARCHAR(255) not null,
+                     duration FLOAT not null, 
+                     speed FLOAT not null,
+                     details VARCHAR (256) not null
+                 );
+                 """)
+```
+In this app, we need to data sets: one for storing the user data (the first table on code), and the second one for storing the data that the user inputs about skiing. All the information inputted will be stored in the tables, accordingly. 
+           
+## Login Screen
+```py
+class LoginScreen(MDScreen):
+    def try_login(self):
+        username = self.ids.username.text
+        password = self.ids.password.text
+        db = example_db("my_database.db")
+        exist_user = db.find_user(username=username)
+        db.close()
+
+        if exist_user:
+            hash = exist_user[5]
+
+            if check_password(password, hash):
+                #login successful
+                self.parent.current = 'WelcomeScreen'
+
+            else:
+                print("Password is wrong")
+```
+This is the code for the login screen. In the login screen, the user has to input their username and password. Then, the code checks whether the user exists already on the database on table "users". If the user exists, it checks for the password, then the user can proceed to enter the welcome screen. If the password do not match, the user needs to reenter their information.
+
+## Welcome Screen
+```py
+class WelcomeScreen(MDScreen):
+    pass
+```
+```py
+<WelcomeScreen>:
+    BoxLayout:
+        size: root.height, root.width
+        orientation:"vertical"
+        FitImage:
+            source: "snowbackground.jpeg"
+
+    MDCard:
+        size_hint: 0.8, 0.8
+        elevation: 10
+        pos_hint: {"center_x": .5, "center_y": .5}
+        orientation: "vertical"
+
+        MDBoxLayout:
+            id: content
+            adaptive_height: True
+            orientation: "vertical"
+            padding: dp(30)
+            spcing: dp(40)
+
+            MDLabel:
+                text: "Welcome"
+                pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+                halign: "center"
+
+            MDLabel:
+                text: "Select your task"
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                halign: "left"
+
+            MdRaisedButton:
+                text: "Input new data"
+                halign: "center"
+                on_release:
+                    root.parent.current = "InputScreen"
+
+            MDRaisedButton:
+                text: "View data"
+                halign: "center"
+                on_release:
+                    root.parent.current = "DataScreen"
+
+            MDRaisedButton:
+                text: "Edit data"
+                halign: "center"
+                on_release:
+                    root.parent.current = "EditScreen"
+
+            MDRaisedButton:
+                text:"Back"
+                halign: "left"
+                on_release:
+                    root.parent.current = "LoginScreen"
+```
+The welcome screen is operated by the front-end of the prodedure. There are no inputs and it is a screen where the users are guided to other screens to;
+input data, view data, or edit data. When the buttons are pressed, the user can move accordingly, and return to this screen by clicking 'back' in each of the screens.
+
+## Register Screen
+```py
+class RegistrationScreen(MDScreen):
+    def try_register(self):
+        username = self.ids.username.text
+        name = self.ids.name.text
+        age = self.ids.age.text
+        phone = self.ids.phone.text
+        email = self.ids.email.text
+        password= self.ids.password.text
+        hashed_password = encrypt_password(password)
+        db = example_db("my_database.db")
+        db.create_new_user(username=username, name=name, age=age, phone_number=phone, email=email, password=password)
+
+        db.close()
+
+        self.parent.current = 'LoginScreen'
+        print("user create was successfull")
+```
+This is the code for the register screen. Users are directed to the register screen when they do not own an account. Here, user needs to input the neccesary fields to create an account. The data inputted here are transfered into the database. After creating an account they can use the login page to login, using their newly created username, and password. The password is hashed, and encrypted to secure privacy and data. 
+
+
+## Input Screen
+Below is the essential calendar operation for this screen.
+```py
+##operating the calendar
+    def on_save(self, instance, value, date_range):
+        label = "Date selected: "
+        date_output = label + str(value)
+        self.ids.date_picker_label.text = date_output
+        InputScreen.selected_date = value
+
+    def on_cancel(self, instance, value):
+        self.root.ids.date_label.text= 'Cancelled'
+
+    def show_date_picker(self):
+        self.theme_cls.theme_style = "Light"
+        self.theme_cls.primary_palette = "BlueGray"
+        #defaults a certain date
+        date_dialog = MDDatePicker(year=2022, month=4, day=28 )
+        date_dialog.bind(on_save=self.on_save, on_cancel=self.on_cancel)
+        date_dialog.open()
+```
+The calendar pops up in the input screen, where users need to select a certain date for their data. To make this user-freindly, I added a feature where the default date is near the current date, so that users do not have to move through calendars much.
+----
+Below is the rest of the input:
+```py
+##inputting the other data
+    def input_data(self):
+        selected_date = InputScreen.selected_date
+        location_entered = self.ids.location.text
+        weather_entered = self.ids.weather.text
+        duration_entered = self.ids.duration.text
+        distance_entered = self.ids.distance.text
+        speed_entered = self.ids.speed.text
+        details_entered = self.ids.detail.text
+
+        if location_entered == "" or weather_entered == "" or duration_entered == None or distance_entered == None or speed_entered == None or selected_date == None:
+            print("The required fields are not filled in")
+        else:
+            selected_date = InputScreen.selected_date
+            location_entered = self.ids.location.text
+            weather_entered = self.ids.weather.text
+            duration_entered = self.ids.duration.text
+            distance_entered = self.ids.distance.text
+            speed_entered = self.ids.speed.text
+            details_entered = self.ids.detail.text
+
+            InputScreen.selected_date = selected_date
+            InputScreen.location_entered = location_entered
+            InputScreen.weather_entered = weather_entered
+            InputScreen.duration_entered = duration_entered
+            InputScreen.distance_entered = distance_entered
+            InputScreen.speed_entered = speed_entered
+            InputScreen.details_entered = details_entered
+
+            db = example_db("my_database.db")
+            db.save_new_data(date=selected_date, location=location_entered, weather= weather_entered, duration=duration_entered, ditance=distance_entered, speed=speed_entered, details=details_entered)
+            db.close()
+            print("Data save succesful")
+
+```
+Here the other data are entered. It consists of a function where if the required fields are not filled in, it tells the user to input all neccessary fields. The information entered are stored in the database, under, athlete. The user can click "back" to return to the welcome screen, where they can either edit the data they have entered or view all their past records.
+
+## View data screen
+```py
+    data_tables = None
+    def on_pre_enter(self, *args):
+        db = example_db("my_database.db")
+        query = db.query()
+        db.close()
+
+        self.data_tables = MDDataTable(
+            size_hint = (1, 0.6),
+            post_hint = {"center_x":0.5, "top": 0.9},
+            use_pagination=False,
+            check = True,
+            column_data = [
+                ("date", 25), ("location", 30),
+                ("weather", 30), ("duration", 30),
+                ("distance", 30), ("speed", 30), ("details", 50)],
+            row_query = query
+        )
+        self.add_widget(self.data_tables)
+```
+This screen simply pulls out the data previously stored in the database, and display it on the interface. 
+
+## Edit data screen
+```py
+    def edit_save(self):
+        # here we update the database
+        updated_id = self.ids.id.text
+        updated_date= self.ids.date.text
+        updated_location = self.ids.location.text
+        updated_weather = self.ids.weather.text
+        updated_duration = self.ids.duration.text
+        updated_distance = self.ids.distance.text
+        updated_speed = self.ids.speed.text
+        updated_details = self.ids.details.text
+
+        db = example_db("example.db")
+        db.update_row(id=updated_id, date=updated_date, location=updated_location, weather=updated_weather, duration=updated_duration, distance=updated_distance, speed=updated_speed, details=updated_details)
+        db.close()
+        self.update_table()
+        self.clear()
+```
+This screen displays the inputted data in tables, just as the viewing screen, but in addition incorporates the feature of selecting rows, and making chages in the inputted information. This is an usuful feature to this app, as users can make neccessary changes and corrections to the data, creating more flexibility. 
+
 
 ### Citations
 SQL create table and insert data - youtube. (n.d.). Retrieved April 19, 2022, from https://www.youtube.com/watch?v=LAP9-vu-KgU 
