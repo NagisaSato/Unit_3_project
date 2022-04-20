@@ -275,8 +275,8 @@ Below is the essential calendar operation for this screen.
         date_dialog.bind(on_save=self.on_save, on_cancel=self.on_cancel)
         date_dialog.open()
 ```
-The calendar pops up in the input screen, where users need to select a certain date for their data. To make this user-freindly, I added a feature where the default date is near the current date, so that users do not have to move through calendars much.
-----
+The calendar pops up in the input screen, where users need to select a certain date for their data. To make this user-freindly, I added a feature where the default date is near the current date, so that users do not have to move through calendars much. 
+-
 Below is the rest of the input:
 ```py
 ##inputting the other data
