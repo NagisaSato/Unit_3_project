@@ -40,7 +40,7 @@ Figure 1: Sketch of the relationship between the screens and their functions
 Figure 2: Wire frame diagram
 
 ## System Diagram
-![](app_system_diagram.jpg) 
+![](system.diagram.jpg) 
 Figure 3: System diagram with input, process, and output
 
 ![](er_diagram.png) 
