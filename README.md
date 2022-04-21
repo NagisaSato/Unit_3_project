@@ -33,49 +33,47 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
 
 ## Sketch of app
 ![](app_sketch.jpg) 
-Figure 1: Sketch of the relationship between the screens and their functions
+Figure 1: Sketch of the relationship between the screens and their functions. This sketch roughly identifies the main screens and components neccesary in this application. 
 
 ## Wireframe
 ![](wireframe.jpg)
 Figure 2: Wire frame diagram
+The diagram above shows the correlations between the screens and the buttons. When each button is pressed, the screens transition as shown with the arrows on the diagram. All the screens offered in the Welcome Screen have buttons that return to the Welcome Screen, where the users can move on to working on their next task quickly.
 
 ## System Diagram
 ![](system.diagram.jpg) 
-Figure 3: System diagram with input, process, and output
+Figure 3: Above is a system diagram for this project. The user inputs the information neccessary from the keyboard and cursor. The entered infromation in transferred into the computer, where there is a functioning application, Pycharm, which is connected to the data base called SQlite. When the application is ran by Pycharm, the application is displayed on an interface on the computer screen. Users can navigate the application from their keyboards and curcors. The system will be based on Mac OS 10.15.6 with Dual-Core Intel Core i3. This game will be created on python 3.9, where input will be from keyboard and output generated as text and visuals on screen monitor. 
 
 ![](er_diagram.png) 
-Figure 4: ER diagram of user and ski athlete
+Figure 4: ER diagram of user and ski athlete. The ER diagram shows the attributes of the classes; users, and athletes. These will be two data tables, however with relation to each other to work together in the application.
 
 ![](uml_diagram.png) 
 Figure 5: UML diagram: this shows that there will be two datatables; user and athlete. 
-For one user, there could be n number of athlete information inputs.
+For one user, there could be n number of athlete information inputs. This means that every user will own an Athlete table, where all their training records are saved and stored. 
 
 ![](sample_table.png) 
-Figure 6: sample table for both 'athlete' and 'athlete'
-
-The system will be based on Mac OS 10.15.6 with Dual-Core Intel Core i3. This game will be created on python 3.9, where input will be from keyboard and output generated as text and visuals on screen monitor. 
-
+Figure 6: sample table for both 'athlete' and 'athlete'. This is what the tables look in the databases. When more 'users', or 'athlete' information are saved into the database, ther will be additional rows created for the data to be saved into.
 
 ## Flow Diagrams
 # Login Screen
 ![](flow.login.jpg) 
-Figure 7: 
+Figure 7: Above is the flow diagram for the login screen. First we check the correspondance of information to their input fields. After, the system checks whether the user already exists in the database. If the user exists, they check for the password, there will be an arror if the user is not an existing user. If the password is correct, the user is able to transfer into the Welcome Screen. 
 
 # Register Screen
 ![](flow.register.jpg) 
-Figure 8: 
+Figure 8: Above is the flow diagram for the register screen. Similar to the login screen, it first check for correspondace of information to the text fields. The inputted information is then stored into the database, ready to be used in the login screen. The important part here is to make sure the password is stored encrypted for security and privacy. 
 
 # Input Screen
 ![](flow.input.jpg) 
-Figure 9: 
+Figure 9: This is the flow diagram for the input screen. The two parts in this screen are the data-selecting functions, and the other inofrmation input organizers. The date-pick makes sure to display the calendar, where users select the dates, where they can either save, or cancel. All data are then saved and stored into the database, table Athlete. 
 
 # Data Screen
 ![](flow.data.jpg) 
-Figure 10: 
+Figure 10: This is the flow diagram for the data viewing screen. There is only one function being used here, of which the function fetches all the data from the table Atheltes. Then, an MDDataTable is used to create the table structure in the screen. 
 
 # Edit Screen
 ![](flow.edit.jpg) 
-Figure 11: 
+Figure 11: This is the flow chart for the data editing screen. This is the screen where users can edit and make changes in their previously inputted data.The top side of the screen is meant to display the table, and the bottom of the screen to input the new editted data, where the new data could be saved, or cleared. 
 
 ## Test plan
 
