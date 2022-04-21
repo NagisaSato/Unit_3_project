@@ -15,7 +15,7 @@ To address the issue above, I would like to create an app that documents his ski
 ### Justification 
 This game is created using python because it is the only language I am familiar with, and it is one of the most commonly used programming languages in the world, with feature of being able to run in a variety of systems. This means there is a large variety of resouces that I could reference and gain help from, therfore, Python is appropriate for this project. The game will be based on Mac OS, with an application called Pycharm. Pycharm was chosen to be used for this project because I am familiar with the application, and is one of the most used coding applications in the world. Pycharm is beginner-friendly in which the errors are clearly identified and highlighted. In addition, Pycharm processes are quick and efficient and therefore increases productivity and speed of my work. 
 
-GUI is ulitilized for this project as I would like to make the app easy for the users to identify and use, thus making it more visual and useful for the users. Kivy Library will be utilized for the reason that is links with Python, and it could be presented in an organized manner, which will be extremely useful when we program detailed and long codes like in this project. The classes and inheritances can be easily displayed, and it also provides detailed customozation, making the final product personal and adjustabe for the user purpose. Kivy is also said to be one of the simplest platforms, therefore, is appropriate for users like myself, who are unfamiliar with app creation. Kivy can funtion on Windows, Linux, Android, OSX, IOS, and Rasberry Pi, which shows flexibility. Libavg or PyQT are alternative libraries that can be used for application development. However, from mentioned previously, we are able to understand the high range of functionality of Kivy, therfore, it is applicable for this project. The databease that will be used for this project is SQLite. This database can function without the need for addtional software installations, and it also comes together with Pycharm. 
+GUI is ulitilized for this project as I would like to make the app easy for the users to identify and use, thus making it more visual and useful for the users. Kivy Library will be utilized for the reason that is links with Python, and it could be presented in an organized manner, which will be extremely useful when we program detailed and long codes like in this project. The classes and inheritances can be easily displayed, and it also provides detailed customozation, making the final product personal and adjustabe for the user purpose. Kivy is also said to be one of the simplest platforms, therefore, is appropriate for users like myself, who are unfamiliar with app creation. Kivy can funtion on Windows, Linux, Android, OSX, IOS, and Rasberry Pi, which shows flexibility. Libavg or PyQT are alternative libraries that can be used for application development. However, from mentioned previously, we are able to understand the high range of functionality of Kivy, therfore, it is applicable for this project. The databease that will be used for this project is SQLite. SQLite puts emphasis on reliability, simplicity, efficiency and independence, which are all the elements that will enhance performance of hte application. This database can function without the need for addtional software installations, and it also comes together with Pycharm. 
 
 ### Details
  The app will have a secure login system, where the user will first need to create an account. Their personal information; email, username, phonenumber, password and age. Once user infromation is created and stored, the user can then sign into the app using their username and password that they have set. In this app the user can input new/additional records, and view previous records as lists. The inputs that the user is able to put in are; training duration, date, max speed, location, total distance, and weather. There are separte screens for each operation, so the users are able to transfer into different screens accordingly. 
@@ -120,7 +120,18 @@ Figure 11: This is the flow chart for the data editing screen. This is the scree
 | 22          | upload all neccessary information on github           | have all sections ready for submission                                  | 15            | April 23               | -        |
 
 # Criteria C: Development
-Below is the code for the neccesary screens to operate the app
+
+## Existing tools
+- KivyMD Library
+- SQLite
+- Relational databases
+- Python OOP
+
+## Techniques used
+- if statements
+- constructing a GUI with Kivy
+
+Below is the code for the neccesary screens to operate the app:
 ```py
 ScreenManager:
     id: scr_manager
@@ -149,12 +160,12 @@ ScreenManager:
         name: "EditScreen"
         id: "EditScreen"
 ```
-The ScreenManager stores and manages the screens inside, in which here are the six screens
+The ScreenManager stores and manages the screens inside, in there are the six screens. This is an essential initial part of the Kivy file to create a front end of the application. Appropriate names are given, as well as ids for easy use and understanding. 
 
 ## creating the databases 
 ```py
     def create(self):
-        self.cursor.execute("""CREATE TABLE Users (
+        self.cursor.execute("""CREATE TABLE Users if not exists (
             name VARCHAR(200) not null,
             username VARCHAR(200) not null unique,
             age INTEGER not null,
@@ -164,7 +175,7 @@ The ScreenManager stores and manages the screens inside, in which here are the s
         );
         """)
 
-        self.cursor.execute("""CREATE TABLE Athlete (
+        self.cursor.execute("""CREATE TABLE Athlete if not exists(
                      id INTEGER primary key,
                      date VARCHAR(200) not null,
                      location VARCHAR(200) not null,
@@ -175,7 +186,7 @@ The ScreenManager stores and manages the screens inside, in which here are the s
                  );
                  """)
 ```
-In this app, we need to data sets: one for storing the user data (the first table on code), and the second one for storing the data that the user inputs about skiing. All the information inputted will be stored in the tables, accordingly. 
+We will need to create a database to store the input data. In this app, we need to data sets: one for storing the user data (the first table on code), and the second one for storing the data that the user inputs about skiing. All the information inputted will be stored in the tables, accordingly. We are able to specify the input type as well as whether the input can/cannot be overlapping with other users'. We can also specify that the fields cannot be left blank by the users. 
            
 ## Login Screen
 ```py
@@ -197,7 +208,7 @@ class LoginScreen(MDScreen):
             else:
                 print("Password is wrong")
 ```
-This is the code for the login screen. In the login screen, the user has to input their username and password. Then, the code checks whether the user exists already on the database on table "users". If the user exists, it checks for the password, then the user can proceed to enter the welcome screen. If the password do not match, the user needs to reenter their information.
+This is an example of a screen python code. This is the code for the login screen. In the login screen, the user has to input their username and password. Then, the code checks whether the user exists already on the database on table "users". Using the 'if' statement, if the user exists, it checks for the password, then the user can proceed to enter the welcome screen. If the password do not match, the user needs to reenter their information. As shown on code, the session is connected to the database, where it referenced the input to the stored data. 
 
 ## Welcome Screen
 ```py
@@ -259,33 +270,41 @@ class WelcomeScreen(MDScreen):
                 on_release:
                     root.parent.current = "LoginScreen"
 ```
-The welcome screen is operated by the front-end of the prodedure. There are no inputs and it is a screen where the users are guided to other screens to;
-input data, view data, or edit data. When the buttons are pressed, the user can move accordingly, and return to this screen by clicking 'back' in each of the screens.
+This is an example of a format of the front end-side of the screen. The welcome screen is operated by the front-end of the prodedure. There are no inputs and it is a screen where the users are guided to other screens to; input data, view data, or edit data. When the buttons are pressed, the user can move accordingly, and return to this screen by clicking 'back' in each of the screens. The BoxLayout creates an environemnt for the other elements such as label and buttons to be organized. I personally decided to put all labels and buttons on the MDCard for cleaner and tidier looks of the screen to enhance user experience. The BoxLayout is used again to organize the elements in the MDCard. 
 
-## Register Screen
+## Hash Password
 ```py
-class RegistrationScreen(MDScreen):
-    def try_register(self):
-        username = self.ids.username.text
-        name = self.ids.name.text
-        age = self.ids.age.text
-        phone = self.ids.phone.text
-        email = self.ids.email.text
-        password= self.ids.password.text
-        hashed_password = encrypt_password(password)
-        db = example_db("my_database.db")
-        db.create_new_user(username=username, name=name, age=age, phone_number=phone, email=email, password=password)
+def encrypt_password(password):
+    return pwd_context.encrypt(password)
+```
+![](hashnohash.png)
+This function is used in 'class register', where the user inputs their newly-created passwords. Their passwords could be stored as it is, but in considereation of security and privacy, this application encrypts the password. The image below the code shows the password storage difference between the hashed, and non-hashed storages. Row 1, last column is the password as it is. Row 2, last column's actual password is 'tester', however with the encrypt function, we are not able to find out the password. This makes the accounts secure. 
 
+## updating the table
+```py
+    def update_table(self):
+        db = example_db("example.db")
+        data = db.query_all_athlete()
         db.close()
 
-        self.parent.current = 'LoginScreen'
-        print("user create was successfull")
+        # The MDtable needs at least two values as input
+        if len(data) < 2:
+            data.append(["", "", "", "", "", "", ""])
+
+        self.data_tables.update_row_data(
+            None, data
+        )
+ ```
+ ```py
+     def query_all_athlete(self):
+        # fetch all creates a list with all the results
+        result = self.cursor.execute("SELECT * from Athlete;").fetchall()
+        return result
 ```
-This is the code for the register screen. Users are directed to the register screen when they do not own an account. Here, user needs to input the neccesary fields to create an account. The data inputted here are transfered into the database. After creating an account they can use the login page to login, using their newly created username, and password. The password is hashed, and encrypted to secure privacy and data. 
+This is an example of a function where the data from the database are pulled onto the interface, where it is physically displayed.  Within the function (one on the top), it uses another function called query_all_athlete, which is defined at the beginning of the code in the actualy python file. (code display under def update_table). This functions collects all the data from the database and creates a list with the results. This way, the accurate data are directly sent onto the interface and displayed into the same format of, a table. 
 
-
-## Input Screen
-Below is the essential calendar operation for this screen.
+## Operating the calendar
+Below is the essential calendar operation for the Input Screen.
 ```py
 ##operating the calendar
     def on_save(self, instance, value, date_range):
@@ -305,95 +324,16 @@ Below is the essential calendar operation for this screen.
         date_dialog.bind(on_save=self.on_save, on_cancel=self.on_cancel)
         date_dialog.open()
 ```
-The calendar pops up in the input screen, where users need to select a certain date for their data. To make this user-freindly, I added a feature where the default date is near the current date, so that users do not have to move through calendars much. 
-
-Below is the rest of the input:
-```py
-##inputting the other data
-    def input_data(self):
-        selected_date = InputScreen.selected_date
-        location_entered = self.ids.location.text
-        weather_entered = self.ids.weather.text
-        duration_entered = self.ids.duration.text
-        distance_entered = self.ids.distance.text
-        speed_entered = self.ids.speed.text
-        details_entered = self.ids.detail.text
-
-        if location_entered == "" or weather_entered == "" or duration_entered == None or distance_entered == None or speed_entered == None or selected_date == None:
-            print("The required fields are not filled in")
-        else:
-            selected_date = InputScreen.selected_date
-            location_entered = self.ids.location.text
-            weather_entered = self.ids.weather.text
-            duration_entered = self.ids.duration.text
-            distance_entered = self.ids.distance.text
-            speed_entered = self.ids.speed.text
-            details_entered = self.ids.detail.text
-
-            InputScreen.selected_date = selected_date
-            InputScreen.location_entered = location_entered
-            InputScreen.weather_entered = weather_entered
-            InputScreen.duration_entered = duration_entered
-            InputScreen.distance_entered = distance_entered
-            InputScreen.speed_entered = speed_entered
-            InputScreen.details_entered = details_entered
-
-            db = example_db("my_database.db")
-            db.save_new_data(date=selected_date, location=location_entered, weather= weather_entered, duration=duration_entered, ditance=distance_entered, speed=speed_entered, details=details_entered)
-            db.close()
-            print("Data save succesful")
-
-```
-Here the other data are entered. It consists of a function where if the required fields are not filled in, it tells the user to input all neccessary fields. The information entered are stored in the database, under, athlete. The user can click "back" to return to the welcome screen, where they can either edit the data they have entered or view all their past records.
-
-## View data screen
-```py
-    data_tables = None
-    def on_pre_enter(self, *args):
-        db = example_db("my_database.db")
-        query = db.query()
-        db.close()
-
-        self.data_tables = MDDataTable(
-            size_hint = (1, 0.6),
-            post_hint = {"center_x":0.5, "top": 0.9},
-            use_pagination=False,
-            check = True,
-            column_data = [
-                ("date", 25), ("location", 30),
-                ("weather", 30), ("duration", 30),
-                ("distance", 30), ("speed", 30), ("details", 50)],
-            row_query = query
-        )
-        self.add_widget(self.data_tables)
-```
-This screen simply pulls out the data previously stored in the database, and display it on the interface. 
-
-## Edit data screen
-```py
-    def edit_save(self):
-        # here we update the database
-        updated_id = self.ids.id.text
-        updated_date= self.ids.date.text
-        updated_location = self.ids.location.text
-        updated_weather = self.ids.weather.text
-        updated_duration = self.ids.duration.text
-        updated_distance = self.ids.distance.text
-        updated_speed = self.ids.speed.text
-        updated_details = self.ids.details.text
-
-        db = example_db("example.db")
-        db.update_row(id=updated_id, date=updated_date, location=updated_location, weather=updated_weather, duration=updated_duration, distance=updated_distance, speed=updated_speed, details=updated_details)
-        db.close()
-        self.update_table()
-        self.clear()
-```
-This screen displays the inputted data in tables, just as the viewing screen, but in addition incorporates the feature of selecting rows, and making chages in the inputted information. This is an usuful feature to this app, as users can make neccessary changes and corrections to the data, creating more flexibility. 
+The calendar pops up in the input screen, where users need to select a certain date for their data. To make this user-freindly, I added a feature where the default date is near the current date, so that users do not have to move through calendars much. The entire operation consists of three sections; function that saves the selected date, function that cancels the selected date thus exits table, and function that displays the calendar. There is a special command for the calendar named MDDatePicker, which can be imported via terminal and can be utilized.
 
 ###Software updates
-To continue innovating and updating the application, we must provide occasional updates. The update system that I would like to use for this application is phased update. Phased update refers to the type of update in which the update occurs for a long period of time, as only once section of the program is changed at a time. I chose this type of update becuase, I am not a very proficient coder, therefore, it could be a risk if I update the entire system at once because there is a large possibility for error in the system
+To continue innovating and updating the application, we must provide occasional updates. The update system that I would like to use for this application is phased update. Phased update refers to the type of update in which the update occurs for a long period of time, as only once section of the program is changed at a time. I chose this type of update becuase, I am not a very proficient coder, therefore, it could be a risk if I update the entire system at once because there is a large possibility for errors in the system.
 
 ### Citations
+“What Is Kivy?” GeeksforGeeks, 30 Jan. 2020, www.geeksforgeeks.org/what-is-kivy/. 
+
+Appropriate Uses for SQLite, www.sqlite.org/whentouse.html#:~:text=They%20emphasize%20scalability%2C%20concurrency%2C%20centralization,compete%20with%20client%2Fserver%20databases. 
+
 “Theming.” Theming - KivyMD 1.0.0.dev0 Documentation, kivymd.readthedocs.io/en/latest/themes/theming/index.html. 
 
 “SQLAlchemy 1.3 Documentation.” Basic Use - SQLAlchemy 1.3 Documentation, docs.sqlalchemy.org/en/13/orm/extensions/declarative/basic_use.html. 
