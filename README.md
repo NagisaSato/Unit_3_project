@@ -36,27 +36,45 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
 Figure 1: Sketch of the relationship between the screens and their functions
 
 ## Wireframe
-
+Figure 2: Wire frame diagram
 
 ## System Diagram
 ![](app_system_diagram.jpg) 
-Figure 2: System diagram with input, process, and output
+Figure 3: System diagram with input, process, and output
 
 ![](er_diagram.png) 
-Figure 3: ER diagram of user and ski athlete
+Figure 4: ER diagram of user and ski athlete
 
 ![](uml_diagram.png) 
-Figure 4: UML diagram: this shows that there will be two datatables; user and athlete. 
+Figure 5: UML diagram: this shows that there will be two datatables; user and athlete. 
 For one user, there could be n number of athlete information inputs.
 
 ![](sample_table.png) 
-Figure x: sample table for both 'athlete' and 'athlete'
+Figure 6: sample table for both 'athlete' and 'athlete'
 
 The system will be based on Mac OS 10.15.6 with Dual-Core Intel Core i3. This game will be created on python 3.9, where input will be from keyboard and output generated as text and visuals on screen monitor. 
 
 
 ## Flow Diagrams
+# Login Screen
+![](flow.login.jpg) 
+Figure 7: 
 
+# Register Screen
+![](flow.register.png) 
+Figure 8: 
+
+# Input Screen
+![](flow.input.png) 
+Figure 9: 
+
+# Data Screen
+![](flow.data.png) 
+Figure 10: 
+
+# Edit Screen
+![](flow.edit.png) 
+Figure 11: 
 
 ## Test plan
 
