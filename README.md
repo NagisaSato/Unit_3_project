@@ -326,8 +326,20 @@ Below is the essential calendar operation for the Input Screen.
 ```
 The calendar pops up in the input screen, where users need to select a certain date for their data. To make this user-freindly, I added a feature where the default date is near the current date, so that users do not have to move through calendars much. The entire operation consists of three sections; function that saves the selected date, function that cancels the selected date thus exits table, and function that displays the calendar. There is a special command for the calendar named MDDatePicker, which can be imported via terminal and can be utilized.
 
-###Software updates
-To continue innovating and updating the application, we must provide occasional updates. The update system that I would like to use for this application is phased update. Phased update refers to the type of update in which the update occurs for a long period of time, as only once section of the program is changed at a time. I chose this type of update becuase, I am not a very proficient coder, therefore, it could be a risk if I update the entire system at once because there is a large possibility for errors in the system.
+### Example screens of the application 
+## Login screen
+![](loginscreen.png)
+## Welcome screen
+![](welcomerscreen.png)
+## register screen
+![](registerscreen.png)
+## Input screen
+![](inputscreen.png)
+## Calendar 
+![](calendarscreen.png)
+
+### Software updates
+To continue innovating and updating the application, we must provide occasional updates. The update system that I would like to use for this application is phased update. Phased update refers to the type of update in which the update occurs for a long period of time, as only once section of the program is changed at a time. I chose this type of update becuase, I am not a very proficient coder, therefore, it could be a risk if I update the entire system at once because there is a large possibility for errors in the system. In addition, updates should occur at least once a month, from beta testing and other forms of user feedbacks. 
 
 ### Citations
 “What Is Kivy?” GeeksforGeeks, 30 Jan. 2020, www.geeksforgeeks.org/what-is-kivy/. 
