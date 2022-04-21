@@ -330,13 +330,15 @@ The calendar pops up in the input screen, where users need to select a certain d
 ## Login screen
 ![](loginscreen.png)
 ## Welcome screen
-![](welcomerscreen.png)
+![](welcomescreen.png)
 ## register screen
 ![](registerscreen.png)
 ## Input screen
 ![](inputscreen.png)
 ## Calendar 
 ![](calendarscreen.png)
+
+# Criteria D 
 
 ### Software updates
 To continue innovating and updating the application, we must provide occasional updates. The update system that I would like to use for this application is phased update. Phased update refers to the type of update in which the update occurs for a long period of time, as only once section of the program is changed at a time. I chose this type of update becuase, I am not a very proficient coder, therefore, it could be a risk if I update the entire system at once because there is a large possibility for errors in the system. In addition, updates should occur at least once a month, from beta testing and other forms of user feedbacks. 
