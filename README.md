@@ -29,7 +29,7 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
 6. Ability to edit inputted data
 
 ## Client's needs
-[]!(clienttext.jpg)
+![](clienttext.jpg)
 # Criteria B: Design
 
 ## Sketch of app
