@@ -36,7 +36,7 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
 Figure 1: Sketch of the relationship between the screens and their functions
 
 ## Wireframe
-![](wireframe.png)
+![](wireframe.jpg)
 Figure 2: Wire frame diagram
 
 ## System Diagram
