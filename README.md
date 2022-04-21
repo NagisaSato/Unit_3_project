@@ -360,6 +360,8 @@ This screen simply pulls out the data previously stored in the database, and dis
 ```
 This screen displays the inputted data in tables, just as the viewing screen, but in addition incorporates the feature of selecting rows, and making chages in the inputted information. This is an usuful feature to this app, as users can make neccessary changes and corrections to the data, creating more flexibility. 
 
+###Software updates
+To continue innovating and updating the application, we must provide occasional updates. The update system that I would like to use for this application is phased update. Phased update refers to the type of update in which the update occurs for a long period of time, as only once section of the program is changed at a time. I chose this type of update becuase, I am not a very proficient coder, therefore, it could be a risk if I update the entire system at once because there is a large possibility for error in the system
 
 ### Citations
 SQL create table and insert data - youtube. (n.d.). Retrieved April 19, 2022, from https://www.youtube.com/watch?v=LAP9-vu-KgU 
