@@ -61,19 +61,19 @@ The system will be based on Mac OS 10.15.6 with Dual-Core Intel Core i3. This ga
 Figure 7: 
 
 # Register Screen
-![](flow.register.png) 
+![](flow.register.jpg) 
 Figure 8: 
 
 # Input Screen
-![](flow.input.png) 
+![](flow.input.jpg) 
 Figure 9: 
 
 # Data Screen
-![](flow.data.png) 
+![](flow.data.jpg) 
 Figure 10: 
 
 # Edit Screen
-![](flow.edit.png) 
+![](flow.edit.jpg) 
 Figure 11: 
 
 ## Test plan
