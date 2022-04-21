@@ -21,13 +21,12 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
  The app will have a secure login system, where the user will first need to create an account. Their personal information; email, username, phonenumber, password and age. Once user infromation is created and stored, the user can then sign into the app using their username and password that they have set. In this app the user can input new/additional records, and view previous records as lists. The inputs that the user is able to put in are; training duration, date, max speed, location, total distance, and weather. There are separte screens for each operation, so the users are able to transfer into different screens accordingly. 
  
 ## Success Criteria
-1. Include calendar for chosing date
-2. Functioning sign up/sign in system with secure password storage (encrypted)
-3. Ability for the user to input information for documentation of ski practice
-4. Ability for the user to be able to view all the saved records on a screen
-5. ski/winter themed login page
-6. Ability to edit inputted data
-
+1. Functioning sign up/sign in system with secure password storage (encrypted)
+2. ski/winter themed login page
+3. Include calendar for chosing date
+4. Ability for the user to input information for documentation of ski practice
+5. Ability for the user to be able to view all the saved records on a screen
+6. Ability to edit inputted dat
 
 # Criteria B: Design
 
