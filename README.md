@@ -15,7 +15,7 @@ To address the issue above, I would like to create an app that documents his ski
 ### Justification 
 This game is created using python because it is the only language I am familiar with, and it is one of the most commonly used programming languages in the world. The game will be based on Mac OS, with an application called Pycharm. Pycharm was chosen to be used for this project because I am familiar with the application, and is one of the most used coding applications in the world. Pycharm is beginner-friendly in which the errors are clearly identified and highlighted. In addition, Pycharm processes are quick and efficient and therefore increases productivity and speed of my work. 
 
-GUI is ulitilized for this project as I would like to make the app easy for the users to identify and use, thus making it more visual and useful for the users. Kivy Library will be utilized for the reason that is links with Python, and it could be presented in an organized manner, which will be extremely useful when we program detailed and long codes like in this project. The classes and inheritances can be easily displayed, and it also provides detailed customozation, making the final product personal and adjustabe for the user purpose. 
+GUI is ulitilized for this project as I would like to make the app easy for the users to identify and use, thus making it more visual and useful for the users. Kivy Library will be utilized for the reason that is links with Python, and it could be presented in an organized manner, which will be extremely useful when we program detailed and long codes like in this project. The classes and inheritances can be easily displayed, and it also provides detailed customozation, making the final product personal and adjustabe for the user purpose. Kivy can funtion on Windows, Linux, Android, OSX, IOS, and Rasberry Pi, which shows flexibility. Libavg or PyQT are alternative libraries that can be used for application development. However, from mentioned previously, we are able to understand the high range of functionality of Kivy, therfore, it is applicable for this project. 
 
 ### Details
  The app will have a secure login system, where the user will first need to create an account. Their personal information; email, username, phonenumber, password and age. Once user infromation is created and stored, the user can then sign into the app using their username and password that they have set. In this app the user can input new/additional records, and view previous records as lists. The inputs that the user is able to put in are; training duration, date, max speed, location, total distance, and weather. There are separte screens for each operation, so the users are able to transfer into different screens accordingly. 
@@ -34,6 +34,9 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
 ## Sketch of app
 ![](app_sketch.jpg) 
 Figure 1: Sketch of the relationship between the screens and their functions
+
+## Wireframe
+
 
 ## System Diagram
 ![](app_system_diagram.jpg) 
@@ -364,11 +367,12 @@ This screen displays the inputted data in tables, just as the viewing screen, bu
 To continue innovating and updating the application, we must provide occasional updates. The update system that I would like to use for this application is phased update. Phased update refers to the type of update in which the update occurs for a long period of time, as only once section of the program is changed at a time. I chose this type of update becuase, I am not a very proficient coder, therefore, it could be a risk if I update the entire system at once because there is a large possibility for error in the system
 
 ### Citations
-SQL create table and insert data - youtube. (n.d.). Retrieved April 19, 2022, from https://www.youtube.com/watch?v=LAP9-vu-KgU 
+“Theming.” Theming - KivyMD 1.0.0.dev0 Documentation, kivymd.readthedocs.io/en/latest/themes/theming/index.html. 
 
-Theming. Theming - KivyMD 1.0.0.dev0 documentation. (n.d.). Retrieved April 20, 2022, from https://kivymd.readthedocs.io/en/latest/themes/theming/index.html 
+“SQLAlchemy 1.3 Documentation.” Basic Use - SQLAlchemy 1.3 Documentation, docs.sqlalchemy.org/en/13/orm/extensions/declarative/basic_use.html. 
 
-SQLALCHEMY 1.1 documentation. Engine Configuration - SQLAlchemy 1.1 Documentation. (n.d.). Retrieved April 20, 2022, from https://docs-sqlalchemy.readthedocs.io/ko/latest/core/engines.html 
+“SQLALCHEMY 1.1 Documentation.” Engine Configuration - SQLAlchemy 1.1 Documentation, docs-sqlalchemy.readthedocs.io/ko/latest/core/engines.html. 
 
-SQLAlchemy 1.3 documentation. Basic Use - SQLAlchemy 1.3 Documentation. (n.d.). Retrieved April 20, 2022, from https://docs.sqlalchemy.org/en/13/orm/extensions/declarative/basic_use.html 
+SQL Create Table and Insert Data - Youtube. www.youtube.com/watch?v=LAP9-vu-KgU. 
 
+Google Search, Google, www.google.com/search?q=cute%2Bski%2Bfield%2Billustration&amp;tbm=isch&amp;ved=2ahUKEwjItP-K8aT3AhVHy4sBHTmsDWIQ2-cCegQIABAA&amp;oq=cute%2Bski%2Bfield%2Billustration&amp;gs_lcp=CgNpbWcQAzoHCCMQ7wMQJ1DXCljKD2DqEGgAcAB4AIABXIgB3gSSAQE3mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&amp;sclient=img&amp;ei=XClhYsiWH8eWr7wPudi2kAY&amp;bih=789&amp;biw=1440&amp;rlz=1C5CHFA_enJP910JP911#imgrc=fJIdibKTkeRDbM&amp;imgdii=oUM14q7S6vTRhM. 
