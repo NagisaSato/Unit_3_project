@@ -26,7 +26,7 @@ GUI is ulitilized for this project as I would like to make the app easy for the 
 3. Include calendar for chosing date
 4. Ability for the user to input information for documentation of ski practice
 5. Ability for the user to be able to view all the saved records on a screen
-6. Ability to edit inputted dat
+6. Ability to edit inputted data
 
 # Criteria B: Design
 
