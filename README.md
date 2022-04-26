@@ -335,6 +335,8 @@ The calendar pops up in the input screen, where users need to select a certain d
 ![](registerscreen.png)
 ## Input screen
 ![](inputscreen.png)
+## Edit screen
+![](editscreen.png)
 ## Calendar 
 ![](calendarscreen.png)
 
